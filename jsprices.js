@@ -42,6 +42,7 @@ class Item {
     static GROSS = 'gross';
 
     constructor(unit_price, net_or_gross, vat, quantity = 1) {
+        unit_price = Number(unit_price);
         this._net_unit = null;
         this._gross_unit = null;
         if (net_or_gross === Item.NET) {
